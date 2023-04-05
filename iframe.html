@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Third-Party Website</title>
+    <script src="https://dashboard-wl-dev.adup.io/adup-sdk.js"></script>
+  </head>
+  <body>
+    <h1>Third-Party Website Using AdUp SDK</h1>
+    <div id="adup-container"></div>
+    <script>
+      function initAdUp() {
+        window.AdUp.init({
+          containerId: "adup-container",
+          hash: "####222",
+          page: "/products",
+          email: "dev@kodeia.com",
+        });
+      }
+      initAdUp();
+    </script>
+  </body>
+</html>

@@ -6,18 +6,24 @@
     <script src="https://dashboard-wl-dev.adup.io/adup-sdk.js"></script>
   </head>
   <body>
-    <h1>Third-Party Website Using AdUp SDK</h1>
+    <center>
+      <h1>Third-Party Website Using AdUp SDK</h1>
+      <button onclick="initAdUp('/orders')">Orders</button>
+      <button onclick="initAdUp('/products')">Products</button>
+      <button onclick="initAdUp('/shop/cms')">Shop CMS</button>
+      <button onclick="initAdUp('/shop/settings')">Shop Settings</button>
+    </center>
+    <br />
     <div id="adup-container"></div>
     <script>
-      function initAdUp() {
+      function initAdUp(page) {
         window.AdUp.init({
           containerId: "adup-container",
-          hash: "####222",
-          page: "/products",
-          email: "dev@kodeia.com",
+          hash: "K/FyPt2Rsr7forvLCKZ0APZc/Gs9y6WQUs4tLcKKszjgSRaFCGVzzJTkhV9clQYcAzDAP2MrjG6DUixLEymX0A==",
+          page: page,
+          email: "sanjaya@yopmail.com",
         });
       }
-      initAdUp();
     </script>
   </body>
 </html>

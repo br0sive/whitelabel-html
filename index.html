@@ -17,6 +17,26 @@
   <body>
     <center>
       <h1>Third-Party Website Using AdUp SDK</h1>
+      <br />
+      <br />
+      Email:
+      <input
+        style="width: 50vw"
+        id="emailInput"
+        type="text"
+        value="sanjaya@yopmail.com"
+      />
+      <br />
+      <br />
+      Hash:
+      <input
+        style="width: 50vw"
+        id="hashInput"
+        type="text"
+        value="K/FyPt2Rsr7forvLCKZ0APZc/Gs9y6WQUs4tLcKKszjgSRaFCGVzzJTkhV9clQYcAzDAP2MrjG6DUixLEymX0A=="
+      />
+      <br />
+      <br />
       <button onclick="initAdUp('/orders')">Orders</button>
       <button onclick="initAdUp('/products')">Products</button>
       <button onclick="initAdUp('/shop/cms')">Shop CMS</button>
@@ -29,11 +49,14 @@
     </center>
     <script>
       function initAdUp(page) {
+        var email = document.getElementById("emailInput").value;
+        var hash = document.getElementById("hashInput").value;
+
         window.AdUp.init({
           containerId: "adup-container",
-          hash: "K/FyPt2Rsr7forvLCKZ0APZc/Gs9y6WQUs4tLcKKszjgSRaFCGVzzJTkhV9clQYcAzDAP2MrjG6DUixLEymX0A==",
+          hash: hash,
           page: page,
-          email: "sanjaya@yopmail.com",
+          email: email,
         });
       }
     </script>
